@@ -1,0 +1,13 @@
+[Unit]
+Description=MOX RFID Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/your/raspberry-pi/src/main.py --start-rfid
+WorkingDirectory=/path/to/your/raspberry-pi
+ExecStop=/usr/bin/python3 /path/to/your/raspberry-pi/src/main.py --stop-rfid
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

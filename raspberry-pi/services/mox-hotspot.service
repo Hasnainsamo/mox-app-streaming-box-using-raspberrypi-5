@@ -1,0 +1,13 @@
+[Unit]
+Description=MOX WiFi Hotspot Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/your/raspberry-pi/src/main.py --start-hotspot
+WorkingDirectory=/path/to/your/raspberry-pi
+ExecStop=/usr/bin/python3 /path/to/your/raspberry-pi/src/main.py --stop-hotspot
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

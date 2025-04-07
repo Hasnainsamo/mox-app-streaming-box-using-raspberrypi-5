@@ -1,0 +1,7 @@
+firebase-admin==6.2.0
+python-dotenv==1.0.0
+flask
+firebase-admin
+RPi.GPIO
+requests
+pn532
